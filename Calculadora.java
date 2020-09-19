@@ -9,7 +9,7 @@ public class Calculadora {
 		Integer a;
 		Integer b;
 		Integer opcion;
-		Integer resultado;
+		Integer resultado=0;
 		do {
 			System.out.println(
 					"Ingrese su operación /n 1 para sumar /n 2 para restar /n 3 para multiplicar /n 4 para dividir");
@@ -21,14 +21,25 @@ public class Calculadora {
 		System.out.println("Ingrese el segundo numero");
 		b = teclado.nextInt();
 
-		if (opcion.equals(1)) {
+		switch (opcion) {
+		case 1:
 			resultado = a + b;
-		} else if (opcion.equals(2)) {
+			break;
+			
+		case 2:
 			resultado = a - b;
-		} else if (opcion.equals(3)) {
+			break;
+			
+		case 3:
 			resultado = a * b;
-		} else {
+			break;
+			
+		case 4:
 			resultado = a / b;
+			break;
+
+		default:
+			break;
 		}
 		System.out.println("El resultado es " + resultado.toString());
 	}
